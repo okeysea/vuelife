@@ -1,0 +1,16 @@
+version: '3'
+services:
+  nodejs:
+    build:
+      context: .
+      dockerfile: ./.containers/nodejs/Dockerfile
+    tty: true
+    volumes:
+      - ./nodejs:/app
+      - ./dist:/app/dist
+      - nodemodule:/app/node_modules
+    working_dir: /app
+    ports:
+      - 3000:3000
+volumes:
+  nodemodule:
