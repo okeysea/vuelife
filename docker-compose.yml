@@ -10,7 +10,8 @@ services:
       - ./dist:/app/dist
       - nodemodule:/app/node_modules
     working_dir: /app
+    command: npm run dev
     ports:
-      - 3000:3000
+      - 3000:8080
 volumes:
   nodemodule:
