@@ -12,6 +12,6 @@ services:
     working_dir: /app
     command: npm run dev
     ports:
-      - 3000:8080
+      - 8080:8080
 volumes:
   nodemodule:
