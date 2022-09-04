@@ -1,21 +1,13 @@
 <template>
-  <div id="nav">
+  <div id="nav" :class="$style.nav">
     <router-link to="/">HOGE</router-link> |
     <router-link to="/fuga">FUGA</router-link>
   </div>
   <router-view />
 </template>
 
-<style lang="scss">
-#app {
-  font-family: Avenir, Helvetica, Arial, sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-  text-align: center;
-  color: #2c3e50;
-}
-
-#nav {
+<style lang="scss" module>
+.nav {
   padding: 30px;
   a {
     font-weight: bold;
@@ -25,5 +17,15 @@
       color: #42b983;
     }
   }
+}
+</style>
+
+<style lang="scss">
+#app {
+  font-family: Avenir, Helvetica, Arial, sans-serif;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  text-align: center;
+  color: #2c3e50;
 }
 </style>
